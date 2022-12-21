@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>Courses</title>
+    <style>
+        main{
+         
+            width: auto;
+            height: 200px;
+            border: 2px dotted black;
+        }
+        .active{
+            
+           border: 2px dashed black;
+         
+        }
+        .myImg{
+            height: 100px;
+            width: 100px;
+        }
+        img{
+            margin:20px
+        }
+       
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">Training Courses</h1>
+<main ></main>
+
+
+
+
+<script type="text/javascript">
+    
+const dropzone=document.querySelector('main');
+dropzone.addEventListener('dragenter',event=>{ event.preventDefault();
+dropzone.classList.add('active');
+})
+dropzone.addEventListener('dragleave',event=>{ event.preventDefault();
+dropzone.classList.remove('active');
+})
+dropzone.addEventListener('dragover',event=>{ 
+event.preventDefault();
+})
+dropzone.addEventListener('drop',event=>{ 
+event.preventDefault();
+dropzone.classList.remove('active')
+const file= (event.dataTransfer.files[0]);
+const reader=new FileReader;
+reader.readAsDataURL(file);
+reader.addEventListener('loadend',()=>{
+const img=document.createElement('img')
+img.className="myImg"
+img.src=reader.result;
+dropzone.append(img)
+
+})
+})
+
+
+
+
+</script>
+<img src="./Images/bootstrap.png" width="150px" height="auto" >
+<img src="./Images/React.png" width="150px" height="auto" >
+<img src="./Images/jquery.png" width="150px" height="auto" >
+<img src="./Images/Java.png" width="150px" height="auto" >
+
+</body>
+</html>

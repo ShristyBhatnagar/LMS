@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <title>Employee Details</title>
+    <link rel="stylesheet" href="./LMS.css">
+    <head>
+        <h1 style="text-align:center ;">Employee Details </h1>
+        <body>
+           <select class="button" id="choicebox" onchange="filterthetable()">
+            <option class="btnf" value="1">1</option>
+            <option class="btnf" value="2">2</option>
+            <option class="btnf" value="3.0">3</option>
+            <option class="btnf" value="4.0">4</option>
+            <option class="btnf" value="5.0">5</option>
+            <option class="btnf" value="6.0">6</option>
+           </select>
+            <table id="emptable"> </table>
+            <!-- <tr>
+                <th>Employee's Name </th>
+                <th>EmployeeID</th>
+                <th>Designation</th>
+                <th>DOJ</th>
+                <th>Training</th>
+            </tr>
+            <tr>
+                <td>Sindhu</td>
+                <td>201</td>
+                <td>Software Engineer Trainee</td>
+                <td>24 November 2022</td>
+                <td>Sales</td>
+            </tr>
+            <tr>
+                <td>Syamala</td>
+                <td>202</td>
+                <td>Software Engineer Trainee</td>
+                <td>22 November 2022</td>
+                <td>Product</td>
+            </tr>
+            <tr>
+                <td>Rani</td>
+                <td>203</td>
+                <td>Software Engineer Trainee</td>
+                <td>22 November 2022</td>
+                <td>Communication</td>
+            </tr>
+            <tr>
+                <td>Pushpa</td>
+                <td>203</td>
+                <td>Software Engineer Trainee</td>
+                <td>22 November 2022</td>
+                <td>Sales</td>
+            </tr> -->
+           <script>
+           
+            function showlist(){
+                fetch("https://hub.dummyapis.com/employee?noofRecords=10&idStarts=1001")
+                .then((res)=>res.json())
+                .then((data)=>{
+                    
+                    var rows="";
+                    data.map((x,i)=>{
+                        
+                    rows +=`<tr id="row${i}"><td id="col1">${x.firstName}</td><td  id="col2">${x.lastName}</td><td  id="col3">${x.email}</td><td  id="col2">${x.salary}</td></tr>`;
+                  })
+                  console.log(rows);
+                    document.getElementById("emptable").innerHTML=`<tr id="mainrow"><td>FirstName</td><td>Lastname</td><td>Email</td><td>Salary</td></tr>` + rows;
+                     } )
+            }
+            showlist();
+
+            function filterthetable(){
+                var optbox=document.getElementById("choicebox");
+                var choice = optbox.options[optbox.selectedIndex].value
+                
+                fetch("https://hub.dummyapis.com/employee?noofRecords=10&idStarts=1001")
+                .then((res)=>res.json())
+                .then(data=>data.filter((x)=>x.salary==choice))
+                .then((data)=>{
+                    console.log(data);
+                    var rows="";
+                    data.map((x,i)=>{
+                        console.log(x.salary);
+                    rows +=`<tr id="row${i}"><td id="col1">${x.firstName}</td><td  id="col2">${x.lastName}</td><td  id="col3">${x.email}</td><td  id="col2">${x.salary}</td></tr>`;
+                  })
+                  console.log(rows);
+                    document.getElementById("emptable").innerHTML=`<tr id="mainrow"><td>FirstName</td><td>Lastname</td><td>Email</td><td>Salary</td></tr>` + rows;
+                     } )
+
+
+            }
+           
+
+           </script>
+        </body>
+    </head>
+</html>

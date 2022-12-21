@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login to LMS</title>
+        <link rel="icon" type="image/x-icon" href="./Images/favicon.png">
+        <link rel="stylesheet" href="./LMS.css">
+        <style>
+            img.background {
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            z-index: -1;
+            width: 100%;
+            height: 100%;
+            filter: blur(5px);
+            background-attachment:fixed; 
+            
+            }
+          </style> 
+        <body>
+            <img class="background" src="./Images/back.jpg" alt="Aleq">
+            
+            <h1 style="text-align:center">Zelarsoft Learning Management System</h1>
+            <script>
+                function validateForm(){
+                var x =window.alert["loginform"]["Username"].value;
+                if(x==""||x==null){
+                    alert("Username must be filled out");
+                    return false;
+                }
+            }
+            function test(){
+                var u=document.getElementById("uname")
+                console.log(u.value)
+                let data=u.value
+                localStorage.setItem("uname",data)
+               
+            }
+            
+            </script>
+            <form style="text-align:center" name="loginform" action="/action_page.php" onsubmit="return validateForm" method="post">
+                <label>Username:</label>
+                <input type="text"id="uname" name="Username" required><br><br>
+                <label>Password:</label>
+                <input type="password" name="password" required><br><br>
+                <input type="checkbox" name="Remember me" value="Remember me" required>
+                Remember me
+                
+                 <button onclick=test()>  <a href ="./Loggedpage.htm" target="_blank" style="text-decoration:none ;"> submit</a></button> 
+                       
+                    
+                    
+                </a>
+                <a href="./mask.htm">Forgot Password</a><br><br>
+               
+                </div>
+
+                <img src="./Images/learning-unscreen.gif" width="500px" height="auto" >
+                
+
+            <footer>Zelarsoft Private Limited 2022 &copy;</footer>
+            <div class="icon-bar">
+                <a href="https://ne-np.facebook.com/Zelarsoft" class="facebook"><img src="./Images/f.png"width=20px height=20px></a>
+                <a href="a" class="Youtube"><img src="./Images/youtube.png"width=20px height=20px></a>
+                <a href="https://www.google.com/search?gs_ssp=eJzj4tVP1zc0TEsuKKkqyzMwYLRSNagwTkpOsjQ0Mk9KMk81Nkk1tDKosDQ2S01JMUk0NzcxNjAzSfHirErNSSwqzk8rAQB0XBOC&q=zelarsoft&rlz=1C1CHBF_enIN1028IN1028&oq=zela&aqs=chrome.3.69i60j69i59l2j46i175i199i512j69i60l2j69i61j69i60.4102j0j7&sourceid=chrome&ie=UTF-8" class="Google"><img src="./Images/google.png"width=20px height=20px></a>
+                <a href="https://www.linkedin.com/company/zelarsoft" class="LinkedIn"><img src="./Images/li.png"width=20px height=20px></a>
+                <a href="https://twitter.com/zelarsoft?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" class="Twitter"><img src="./Images/twit.png"width=20px height=20px></a>
+            </div>
+        </body>
+    </head>
+</html>

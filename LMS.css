@@ -1,0 +1,381 @@
+
+
+
+
+    
+   
+     .side {
+      background-color: #7CEEFE;
+      position:sticky;
+      
+      
+     }
+     
+     section::after{
+     content:"";
+     display: inline-block;
+     clear: both;
+     }
+     .team img{
+      float: right;
+      height: 420px;
+      width:auto;
+      margin-right: 10px; 
+      margin-top: -400px;
+     }
+     
+    .callout {
+      position:sticky;
+      float:right;
+      bottom: 10px;
+      width: 100px;
+      border-radius: 20px;
+      border-color: #0588FF;
+      box-sizing: content-box;
+    
+    }
+    
+
+
+.nav {
+    position:sticky;
+    padding: 0px;
+    padding-top: 0px;
+    scroll-padding-bottom: 0;
+    height:500px;
+list-style: none;
+text-align: left;
+width: 150px;
+
+color: #0588FF	;
+background-color:#0588FF	;
+border-radius: 5px;
+}
+
+.nav a:hover:not(.active){
+    background-color: gray;
+    color:#0588FF;
+    
+}
+.bottom {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    left: 0px;
+}
+.Profile{
+    position: sticky;
+    float: right;
+    padding: 0px;
+    background: #0588FF;
+    border-radius: 5px;
+    height: auto;
+
+}
+.dropdown{
+    float:right;
+    margin-top: auto;
+    background-color:#0588FF;
+    border-color: #0588FF;
+    padding: 20px;
+    position:relative;
+    border-radius: 20px;
+    display:inline-block;
+    margin: 40px;
+    /* height: fit-content; */
+}
+.dropdown a{text-decoration: none;}
+.dropdown-content {
+   
+    display: none;
+    position:absolute;
+    background-color:whitesmoke;
+    min-width: 140px;
+    border-radius: 10px;
+    
+}
+.dropdown-content a{
+    display:block;
+    text-decoration: none;
+    padding:13px;
+   
+
+}
+.dropdown-content a:hover{
+    background-color: azure;
+}
+.dropdown:hover .dropdown-content{
+    display: block;
+}
+
+.icon-bar{
+    
+    position:fixed;
+    top: 50%;
+    margin-left:96%;
+    margin-top:0px;
+
+    
+}
+.icon-bar a {
+    
+    
+    display: block;
+    text-align: center;
+    padding: 16px;
+    transition: all 0.3s ease;
+    color: white;
+    font-size: 20px;
+
+}
+.icon-bar a:hover{
+    background-color: #0000;
+}
+.facebook {
+    background: #3B5998;
+    color: white;
+  }
+  
+  .Twitter {
+    background: #55ACEE;
+    color: white;
+  }
+  
+  .Google {
+    background: white;
+    color: white;
+  }
+  
+  .LinkedIn {
+    background: #007bb5;
+    color: white;
+  }
+  
+  .Youtube {
+    background: #bb0000;
+    color: white;
+  }
+ 
+  .Announcements{
+    column-count: 3;
+    column-gap: 40px;
+    column-rule: 2px solid saddlebrown;
+
+  }
+  
+  
+  .chatwindow
+  {
+    position: sticky;
+    display: none;
+    z-index: 1;
+    bottom: 140px;
+    margin-left:900px;
+    background-color: #0588FF;
+    border-radius: 20px;
+  }
+
+  .chatbutton{
+    position: sticky;
+    bottom: 40px;
+    margin-left:900px;
+  }
+  .chtbtn{
+    position: sticky;
+    margin-left: 300px;
+  }
+  .box1{
+    
+    margin-left: 340px;
+    background-color: #7CEEFE;
+    width:500px;
+    height: 200px;
+    border: 15px solid azure;
+    border-radius: 30px;
+    position:absolute;
+    top: 150px;
+   
+   
+  }
+  .sidenav {
+    height:auto;
+    width: 0;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color:#55ACEE;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 0px;
+    margin-top: 150px;
+  }
+  
+  .sidenav a {
+    padding: 8px 8px 8px 20px;
+    text-decoration: none;
+    font-size: 25px;
+    color: black;
+    display: block;
+    transition: 0.3s;
+    text-shadow: 2px 2px;
+  }
+  
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 30px;
+  }
+  
+  #list {
+    transition: margin-left .5s;
+    padding: 10px;
+  }
+  
+  @media screen and (max-height: 350px) {
+    .sidenav {padding-top: 10px;}
+    .sidenav a {font-size: 18px;}
+  }
+
+  .bottom{
+    margin-bottom: -300px;
+  }
+  .box1-content{
+    margin-left: 100px;
+    margin-right: 20px;
+    margin-bottom: 30px;
+  }
+  
+  .loc1{
+    
+    position: inherit;
+    background-color: azure;
+    width:400px;
+    height: auto;
+    border: 10px solid whitesmoke;
+    border-radius: 30px;
+    text-align: center;
+
+  }
+ .mapouter{
+    margin-left: 50px;
+
+  }
+  .loc2{
+    
+    margin-top: -370px;
+    margin-left: 450px;
+    background-color: azure;
+    width:400px;
+    height: auto;
+    border: 10px solid whitesmoke;
+    border-radius: 30px;
+    text-align: center;
+
+  }
+  .loc3{
+    margin-top: -360px;
+    margin-left: 900px;
+    background-color: azure;
+    width:400px;
+    height: auto;
+    border: 10px solid whitesmoke;
+    border-radius: 30px;
+    text-align: center;
+
+  }
+ 
+  .sidenav-Content a{
+   
+    padding: 8px 8px 8px 20px;
+    text-decoration: none;
+    font-size: 25px;
+    color: black;
+    display: block;
+    transition: 0.3s;
+  }
+  .sidenav-Content a:hover {
+    color: #f1f1f1;
+  }
+  .sid a{
+    display:block;
+
+  }
+  .sidenav-a{
+    display: none;
+    position: absolute;
+  }
+  .sidenav-a a{
+    display: block;
+    margin-left:50px;
+    background-color:transparent;
+  }
+  .sid:hover .sidenav-a{display:contents;}
+
+  table{
+    width: 100%;
+    border-radius: 5px;
+    border-color: #007bb5;
+  }
+  
+  th,td{
+    text-align: center;
+padding: 8px;
+  }
+  tr:nth-child(even){
+  background-color: #007bb5;
+  }
+  th{
+    background-color: #7CEEFE;
+  }
+  .mainbody{
+    text-align: justify;
+    border: 1px solid transparent;
+    padding: 10px;
+    width: 500px;
+    height: fit-content;
+  }
+  
+  .smallwin{
+    position: absolute;
+
+    left: 300px;
+    display:none;
+   
+  }
+  .smallwin2{
+    position: absolute;
+    left: 300px;
+    display:none;
+    
+  }
+
+  .Calc{
+    position: absolute;
+    left: 300px;
+    display:none;
+   
+  }
+  .closebtnx{
+    position: absolute;
+    right:200px;
+    
+  }
+  .emptybox{
+    border: 20px solid gray;
+    border-radius: 5px;
+    height: 300px;
+    width: 500px;
+    position:fixed;
+    margin: 250px;
+    top: -150px;
+    z-index:-1;
+  }
+  
+  

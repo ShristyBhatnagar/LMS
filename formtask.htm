@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <title>Reg Form</title>
+    <link rel="stylesheet" href="/zelar/file.css">
+    <head></head>
+    <body>
+        <div class="FormBox">
+        <h1 style="text-align: center;">Registration Form</h1>
+    <form name="myForm"> <div class="formcontent">
+        <label>First Name:</label><input type="text" id="fname" placeholder="Your first name" required><br><br>
+        <label>Last Name:</label><input type="text" id="lname" placeholder="Your last name"><br><br>
+        <label>Date of Birth:</label><input type="date" id="DOB" placeholder="DD-MM-YYYY"><br><br>
+        <label>Email:</label><input type="text" id="email" placeholder="abc@gmail.com"><br><br>
+        <label>Password:</label><input type="password" placeholder="set a password"><br><br>
+        <input type="radio" name="gender" value="Male"  ><label >Male</label>
+        <input type="radio" name="gender" value="Female" ><label >Female</label><br><br>
+    
+        <label>Location</label><input type="checkbox"name="area" value="urban"><label>Urban</label><input type="checkbox"name="area" value="rural"><label>Rural</label><br><br>
+        
+    </div>
+    <center><button type="button" onclick="display()" >Submit</button></center>
+    <input type="reset" value="reset">
+    
+    </form>
+    </div>
+    
+      <p id="display"></p>
+      
+    <script>
+        function display(){
+        const x=document.getElementById("fname").value;
+        const x2=document.getElementById("lname").value;
+        const x3=document.getElementById("DOB").value;
+        const x4=document.getElementById("email").value;
+        const x5=document.querySelector('input[name="gender"]:checked').value;
+        const x6=document.querySelector('input[type="checkbox"]:checked').value;
+        document.getElementById("display").innerHTML="First name-"+x+"<br>"+"Last Name-"+x2+"<br>"+"DOB-"+x3+"<br>"+"Email-"+x4+"<br>"+"Gender-"+x5+"<br>"+"Location-"+x6;
+       
+        }
+        
+    </script>
+   
+
+    </body>
+
+</html>
